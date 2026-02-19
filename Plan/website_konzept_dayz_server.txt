@@ -1,0 +1,43 @@
+WEBSITE KONZEPT – MODERNER DAYZ SERVER
+
+Allgemeines Ziel: Die Website soll modern, hochwertig und professionell
+wirken. Das Design muss sich vollständig am Logo orientieren. Farben,
+Stil, Effekte und Gesamtästhetik sollen zum Logo passen.
+
+STARTSEITE: - Beim Laden der Seite steht das Logo im Mittelpunkt. - Groß
+dargestellt im Hero-Bereich. - Hintergrunddesign passend zu den
+Logo-Farben. - Moderner Gaming-/Survival-Stil. - Leichte Animationen
+(z.B. Fade-In, Glow oder Partikeleffekt). - Call-to-Action Button (z.B.
+„Jetzt Spielen“ oder „Server beitreten“).
+
+SERVER TAB: - Informationen zum DayZ Server. - Server-IP. -
+Map-Informationen. - Features (z.B. Custom Areas, Events, Loot-System,
+PvP). - Kurze professionelle Beschreibung des Server-Konzepts. -
+Optional: Status-Anzeige oder Spieleranzahl.
+
+REGELN TAB: - Klare und strukturierte Serverregeln. - Unterteilung in
+Abschnitte (Allgemein, PvP, Basebuilding, Verhalten). - Übersichtliches
+Layout. - Gut lesbare Typografie.
+
+DISCORD TAB: - Einladung zum Discord Server. - Discord-Einladungslink. -
+Beschreibung der Community. - Hinweis auf Support, Ticketsystem oder
+Events. - Optional: Discord Widget Integration.
+
+MONETARISIERUNG TAB: - Übersicht über Supporter- oder VIP-Ränge. -
+Erklärung, was man erhält. - Transparente Beschreibung der Vorteile. -
+Hinweis, dass Monetarisierung den Server unterstützt. -
+Zahlungsmöglichkeiten (z.B. PayPal). - Professionelles,
+vertrauenswürdiges Design.
+
+DESIGN-VORGABEN: - Modernes UI/UX Design. - Dunkler Hintergrund (wenn
+Logo dunkel ist) oder angepasst an Logo-Farben. - Akzentfarben aus dem
+Logo übernehmen. - Saubere Navigation mit Tabs: Startseite | Server |
+Regeln | Discord | Monetarisierung - Responsive Design (Mobil +
+Desktop). - Gaming / Survival Atmosphäre. - Hochwertige Typografie. -
+Leichte Animationen und Hover-Effekte.
+
+ZIEL: Eine moderne, professionelle Gaming-Website, die das Logo in den
+Mittelpunkt stellt und eine starke Markenidentität aufbaut.
+
+discord Server:
+https://discord.gg/qrJaVn8H

@@ -1,0 +1,33 @@
+---
+interface Props {
+  class?: string;
+  color?: 'red' | 'green';
+}
+
+const { class: className = '', color = 'red' } = Astro.props;
+const glowColor = color === 'red' ? 'rgba(232, 121, 29, 0.4)' : 'rgba(46, 204, 113, 0.4)';
+---
+
+<div
+  class={`relative rounded-xl overflow-hidden ${className}`}
+  style={`--glow-color: ${glowColor}`}
+>
+  <div class="absolute inset-0 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"
+    style={`background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--glow-color), transparent 40%);`}
+  />
+  <div class="relative">
+    <slot />
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('[style*="--glow-color"]').forEach((el) => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = (el as HTMLElement).getBoundingClientRect();
+      const x = ((e as MouseEvent).clientX - rect.left) / rect.width * 100;
+      const y = ((e as MouseEvent).clientY - rect.top) / rect.height * 100;
+      (el as HTMLElement).style.setProperty('--mouse-x', `${x}%`);
+      (el as HTMLElement).style.setProperty('--mouse-y', `${y}%`);
+    });
+  });
+</script>

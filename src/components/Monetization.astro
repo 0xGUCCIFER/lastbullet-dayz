@@ -1,0 +1,71 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import Badge from './ui/Badge.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const freeFeatures = lang === 'de'
+  ? ['Voller Server-Zugang', 'Alle Gameplay-Features', 'Community-Events', 'Discord-Support']
+  : ['Full server access', 'All gameplay features', 'Community events', 'Discord support'];
+
+const cosmeticFeatures = lang === 'de'
+  ? ['Custom Skins', 'Spezielle Titel', 'Priority Queue', 'Supporter-Rolle']
+  : ['Custom skins', 'Special titles', 'Priority queue', 'Supporter role'];
+---
+
+<section id="monetization" class="py-24 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="hud-label mb-3">// {lang === 'de' ? 'VERSORGUNG' : 'SUPPLY'} :: SEC.03</p>
+      <h2 class="text-4xl sm:text-5xl font-bold mb-4">{t('monetization.title')}</h2>
+      <p class="text-text-secondary text-lg">{t('monetization.subtitle')}</p>
+      <div class="mil-divider mt-6">
+        <span class="w-2 h-2 rotate-45 bg-accent" />
+      </div>
+    </div>
+
+    <p class="text-center text-text-secondary max-w-2xl mx-auto mb-12">{t('monetization.desc')}</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- Free Tier -->
+      <div class="bg-surface border border-border rounded-xl p-8 hover:border-accent-green/50 transition-all duration-300">
+        <div class="flex items-center gap-3 mb-6">
+          <Badge variant="green">Free</Badge>
+          <h3 class="text-xl font-bold">{lang === 'de' ? 'Kostenlos' : 'Free'}</h3>
+        </div>
+        <ul class="space-y-3">
+          {freeFeatures.map((feature) => (
+            <li class="flex items-center gap-3 text-text-secondary">
+              <svg class="w-5 h-5 text-accent-green shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Cosmetic Tier -->
+      <div class="bg-surface border border-accent/30 rounded-xl p-8 hover:border-accent/50 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div class="relative">
+          <div class="flex items-center gap-3 mb-6">
+            <Badge variant="red">Supporter</Badge>
+            <h3 class="text-xl font-bold">{lang === 'de' ? 'Kosmetisch' : 'Cosmetic'}</h3>
+          </div>
+          <ul class="space-y-3">
+            {cosmeticFeatures.map((feature) => (
+              <li class="flex items-center gap-3 text-text-secondary">
+                <svg class="w-5 h-5 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

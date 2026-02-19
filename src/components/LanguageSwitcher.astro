@@ -1,0 +1,17 @@
+---
+import { getLangFromUrl } from '../i18n/utils';
+import { languages } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const otherLang = lang === 'de' ? 'en' : 'de';
+const currentPath = Astro.url.pathname.replace(`/${lang}`, '') || '/';
+---
+
+<a
+  href={`/${otherLang}${currentPath}`}
+  class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border hover:border-accent-red/50 text-text-secondary hover:text-text-primary transition-all duration-300 text-sm"
+  aria-label={`Switch to ${languages[otherLang]}`}
+>
+  <span class="text-base">{otherLang === 'de' ? '🇩🇪' : '🇬🇧'}</span>
+  <span>{languages[otherLang]}</span>
+</a>
